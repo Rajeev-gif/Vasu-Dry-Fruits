@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Vasu Dry Fruits </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="nav-logo">
+                    <div class="logo-img"></div>
+                </div>
+                <div class="nav-search">
+                    <input placeholder="Search Dry Fruits" class="search-input">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div class="nav-cart border">
+                    <a href="C:\Users\rajee\OneDrive\Desktop\coding\Vasu Dry Fruits\cart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Cart
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="hero-section"></div>
+        <div class="hero-msg">
+            <i class="fa-regular fa-heart"></i>
+            <h3>Vasu Delicacies</h3>
+        </div>
+        <hr>
+        <div class="hero-products" id="id1">
+            <div class="row1 hero-products">
+                <div class="box1 box">
+                    <div class="box1-content">
+                        <div class="img" style="background-image: url('https://m.media-amazon.com/images/I/71+UzyKL8hL._AC_UF1000,1000_QL80_.jpg');"></div>
+                        <h4> Cashews </h4>
+                        <div class="box1-selection">
+                            <p>Select Product Weight: 
+                                <select id="cashew-weight" onchange="CashewPrice()">
+                                    <option> .... </option>
+                                    <option value="1"> 500g </option>
+                                    <option value="2"> 1kg </option>
+                                    <option value="3"> 2kg </option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="product-price">
+                            <p id="cashew">Price: </p>
+                        </div>
+                        <div class="box1-button">
+                            <button onclick="addcashewToCart()"> Add To Cart </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2 box">
+                    <div class="box1-content">
+                        <div class="img" style="background-image: url('https://nuttyyogi.com/cdn/shop/products/Almonds.jpg?v=1606373738');"></div>
+                        <h4>Californian Almonds</h4>
+                        <div class="box1-selection">
+                            <p>Select Product Weight: 
+                                <select id="almonds-weight" onchange="AlmondsPrice()">
+                                    <option> .... </option>
+                                    <option value="1"> 500g </option>
+                                    <option value="2"> 1kg </option>
+                                    <option value="3"> 2kg </option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="product-price">
+                            <p id="almonds">Price: </p>
+                        </div>
+                        <div class="box1-button">
+                            <button onclick="AddAlmondsToCart()"> Add To Cart </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box3 box">
+                    <div class="box1-content">
+                        <div class="img" style="background-image: url('https://images.immediate.co.uk/production/volatile/sites/30/2024/02/Bowl-of-dates-6aae23f.jpg?quality=90&resize=440,400');"></div>
+                        <h4>Date Crown</h4>
+                        <div class="box1-selection">
+                            <p>Select Product Weight: 
+                                <select id="date-weight" onchange="DatePrice()">
+                                    <option> .... </option>
+                                    <option value="1"> 500g </option>
+                                    <option value="2"> 1kg </option>
+                                    <option value="3"> 2kg </option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="product-price">
+                            <p id="date">Price: </p>
+                        </div>
+                        <div class="box1-button">
+                            <button onclick="AddDateToCart()"> Add To Cart </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box4 box">
+                    <div class="box1-content">
+                        <div class="img" style="background-image: url('https://d3kgrlupo77sg7.cloudfront.net/media/chococoorgspice.com/images/products/pista-roasted-and-salted.20220922163628.webp');"></div>
+                        <h4>Pistchio</h4>
+                        <div class="box1-selection">
+                            <p>Select Product Weight: 
+                                <select id="pista-weight" onchange="PistaPrice()">
+                                    <option> .... </option>
+                                    <option value="1"> 500g </option>
+                                    <option value="2"> 1kg </option>
+                                    <option value="3"> 2kg </option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="product-price">
+                            <p id="pista">Price: </p>
+                        </div>
+                        <div class="box1-button">
+                            <button onclick="AddPistaToCart()"> Add To Cart </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row2 hero-products">
+                <div class="box1 box">
+                    <div class="box1-content">
+                        <div class="img" style="background-image: url('https://royalfantasy.in/cdn/shop/products/Walnuts-Kernals-Jumbo-1_28284d12-c2e0-464b-af4b-8fad4814aaf3.jpg?v=1630653936');"></div>
+                        <h4>Walnut</h4>
+                        <div class="box1-selection">
+                            <p>Select Product Weight: 
+                                <select id="walnut-weight" onchange="WalnutPrice()">
+                                    <option> .... </option>
+                                    <option value="1"> 500g </option>
+                                    <option value="2"> 1kg </option>
+                                    <option value="3"> 2kg </option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="product-price">
+                            <p id="walnut">Price: </p>
+                        </div>
+                        <div class="box1-button">
+                            <button onclick="AddWalnutToCart()"> Add To Cart </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2 box">
+                    <div class="box1-content">
+                        <div class="img" style="background-image: url('https://www.dryfruithub.com/image/cache/catalog/3Photo%20Shoot/anjeer-medium-500gms-dried-fruits-30-550x550.jpg.webp');"></div>
+                        <h4>Figs (Anjeer)</h4>
+                        <div class="box1-selection">
+                            <p>Select Product Weight: 
+                                <select id="figs-weight" onchange="FigsPrice()">
+                                    <option> .... </option>
+                                    <option value="1"> 500g </option>
+                                    <option value="2"> 1kg </option>
+                                    <option value="3"> 2kg </option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="product-price">
+                            <p id="figs">Price: </p>
+                        </div>
+                        <div class="box1-button">
+                            <button onclick="AddFigsToCart()"> Add To Cart </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box3 box">
+                    <div class="box1-content">
+                        <div class="img" style="background-image: url('https://m.media-amazon.com/images/I/81S1S2ZccML.jpg');"></div>
+                        <h4>Raisins (kishmish)</h4>
+                        <div class="box1-selection">
+                            <p>Select Product Weight: 
+                                <select id="raisins-weight" onchange="RaisinsPrice()">
+                                    <option> .... </option>
+                                    <option value="1"> 500g </option>
+                                    <option value="2"> 1kg </option>
+                                    <option value="3"> 2kg </option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="product-price">
+                            <p id="raisins">Price: </p>
+                        </div>
+                        <div class="box1-button">
+                            <button onclick="AddRaisinsToCart()"> Add To Cart </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box4 box">
+                    <div class="box1-content">
+                        <div class="img" style="background-image: url('https://www.nutraj.com/cdn/shop/files/the-power-of-trail-mix-top-8-reasons-to-include-trail-mix-in-your-diet-Desktop-View_copy.jpg?v=1692598372');"></div>
+                        <h4>Trail Mix</h4>
+                        <div class="box1-selection">
+                            <p>Select Product Weight: 
+                                <select id="trailmix-weight" onchange="TrailmixPrice()">
+                                    <option> .... </option>
+                                    <option value="1"> 500g </option>
+                                    <option value="2"> 1kg </option>
+                                    <option value="3"> 2kg </option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="product-price">
+                            <p id="trailmix">Price: </p>
+                        </div>
+                        <div class="box1-button">
+                            <button onclick="AddTrailmixToCart()"> Add To Cart </button>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-logo"></div>
+                    <div class="footer-contactdetails">
+                        <div class="reach-us">
+                            <h4>Wanna Reach Us?</h4>
+                            <p>addres: Store no.319 Devlali Camp,<br> Nashik, Maharashtra (422401)</p>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Contact Info:</h4>
+                            <p> <i class="fa-solid fa-phone"></i> +91 89563 14618</p>
+                            <p> <i class="fa-solid fa-phone"></i> +91 74989 09425</p>
+                        </div>
+                        <div class="footer-buttons">
+                            <a href="cart.html"><button> View Cart </button></a>
+                            <a href="#id1"><button>Keep Shopping</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <hr>
+                    <p>© 2024, Vasu Dry Fruits. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </div>
+        <script src="JS.js"></script>
+    </body>
+</html>

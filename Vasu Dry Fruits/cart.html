@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            @media only screen and (max-width: 400px){
+                .box{
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="nav-logo">
+                    <div class="logo-img"></div>
+                </div>
+                <div class="nav-search">
+                    <input placeholder="Search Dry Fruits" class="search-input">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div class="nav-cart border">
+                    <a href="C:\Users\rajee\OneDrive\Desktop\coding\Vasu Dry Fruits\index.html">
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="cart-page">
+            <div class="consumer-cart">
+                <br>
+                <hr>
+                <div class="cart-head">
+                    <h2>Your Cart</h2>
+                    <div class="empty-cart">
+                        <button onclick="clearCart()">Clear Cart</button>
+                    </div>
+                </div>
+                <div class="hero-cart">
+                    <div id="cart-items"></div>
+                </div>
+                <div class="cart-checkout">
+                    <div class="sum-of-prices">
+                        <p id="sum"></p>
+                    </div>
+                    <div id="checkout-button">
+                        <button id="Check"> Checkout</button>
+                    </div>
+                </div>
+                <div id="checkout-popup" class="popup">
+                    <form id="checkout-form">
+                        <!-- Add your form fields here (e.g., name, address, email, etc.) -->
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="number" name="phone" placeholder="Contact No." required>
+                        <input type="text" name="address" placeholder="Address" required>
+                        <input type="text" name="city" placeholder="City" required>
+                        <input type="text" name="state" placeholder="State" required>
+                        <input type="text" name="pin-code" placeholder="Pin-code" required>
+                        <p id="about-product"></p>
+                        <p id="Total-Price"></p>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-logo"></div>
+                    <div class="footer-contactdetails">
+                        <div class="reach-us">
+                            <h4>Wanna Reach Us?</h4>
+                            <p>addres: Store no.319 Devlali Camp,<br> Nashik, Maharashtra (422401)</p>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Contact Info:</h4>
+                            <p> <i class="fa-solid fa-phone"></i> +91 89563 14618</p>
+                            <p> <i class="fa-solid fa-phone"></i> +91 74989 09425</p>
+                        </div>
+                        <div class="footer-buttons">
+                            <a href="cart.html"><button> View Cart </button></a>
+                            <a href="index.html"><button>Keep Shopping</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <hr>
+                    <p>© 2024, Vasu Dry Fruits. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </div>
+        <script src="cart.js"></script>
+    </body>
+</html>
